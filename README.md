@@ -15,3 +15,5 @@ $ mix deps.get && mix escript.build
 ```bash
 $ cowsay hello,world | ./lolcat
 ```
+
+![capture](https://raw.githubusercontent.com/ReSTARTR/ex-lolcat/master/static/ex-lolcat.png)

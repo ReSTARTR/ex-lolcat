@@ -6,6 +6,10 @@ defmodule Lolcat.Mixfile do
      version: "0.0.1",
      elixir: "~> 1.0",
      escript: escript_config,
+
+     description: description,
+     package: package,
+
      deps: deps]
   end
 
@@ -29,6 +33,18 @@ defmodule Lolcat.Mixfile do
     [
       {:quickrand, tag: "1.5.0" },
       {:colorful,  tag: "0.6.0" }
+    ]
+  end
+
+  defp description do
+    """
+    """
+  end
+
+  defp package do
+    [contributors: ["Masaki YOSHIDA"],
+      licenses: ["MIT"],
+      links: %{"Github" => "https://github.com/restartr/ex-lolcat"}
     ]
   end
 

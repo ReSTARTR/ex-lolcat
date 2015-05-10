@@ -38,6 +38,7 @@ defmodule Lolcat.Mixfile do
 
   defp description do
     """
+    The clone of lolcat. written in elixir
     """
   end
 

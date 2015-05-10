@@ -2,14 +2,15 @@ defmodule Lolcat do
   def main(_args \\ []) do
     :random.seed
     os = :quickrand.uniform(256)
-    puts(os)
+    puts("", os)
   end
 
-  def puts(os \\ 0) do
-    IO.stream(:stdio, :line)
-    |> Stream.with_index
-    |> Enum.map(fn({s, j}) -> format(s, j + os) end)
-    |> IO.puts
+  def puts(:eof, _os), do: :ok
+  def puts(line \\ "", os \\ 0) when is_binary(line) do
+    IO.puts format(line, os)
+    line = IO.read(:stdio, :line)
+
+    puts(line, os + 1)
   end
 
   def colorize({c, i}, os, freq) do

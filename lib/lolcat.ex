@@ -20,6 +20,8 @@ defmodule Lolcat do
 
   def format(string, os \\ 0, freq \\ 0.3) do
     string
+    |> String.replace("\n", "")
+    |> String.replace("\t", "    ")
     |> to_char_list
     |> Enum.with_index
     |> Enum.map(&(colorize(&1, os, freq)))

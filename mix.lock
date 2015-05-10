@@ -1,0 +1,4 @@
+%{"color": {:git, "https://github.com/julianduque/erlang-color.git", "e60f6302f795220f5f0bee86391ffee5274edec0", [tag: "v0.2.0"]},
+  "colorful": {:hex, :colorful, "0.6.0"},
+  "exprintf": {:hex, :exprintf, "0.1.6"},
+  "quickrand": {:hex, :quickrand, "1.5.0"}}
